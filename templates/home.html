@@ -11,6 +11,7 @@
         height: 360px;
         width:  100%;
         object-fit:cover;
+        margin-bottom:16px;
       }
     </style>
   </head>
@@ -18,30 +19,36 @@
 
   
   <body>
+    {% include 'nav.html' %}
+    <img class = "img-fluid" id="banner" src="https://jean-careers-website-1.jhteee.repl.co/static/banner4.jpg" >
     <div class ="container">
-      <h1 class ='text-center mt-2 and mb-4'>{{company_name}} Careers</h1>
+      <h1 class ='text-center mt-2 mb-4'>
+        {{company_name}} Careers
+      </h1>
 
-    
-      <img class = "img-fluid" id="banner" src="https://jean-careers-website-1.jhteee.repl.co/static/banner3.jpg" >
 
-
-    
-     <h2 class = "text-center mt-2 mb-4">About Jean</h2>
+      <div class = 'row' style = "margin-bottom:16px">
+        <div class = 'col-md-6'>
       <p class="lead">
  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget sollicitudin nunc, ut commodo enim. Cras vitae gravida eros. Sed pulvinar libero ut bibendum consectetur. Vivamus suscipit arcu eleifend vulputate commodo. Maecenas sed pretium augue. Quisque a facilisis eros, et fermentum sapien. Sed et libero sit amet elit tristique condimentum. Suspendisse ullamcorper auctor nulla.
-
-Duis sed consequat orci, sit amet tempor sem. Fusce enim arcu, semper nec elit a, scelerisque malesuada orci. Nulla mauris augue, vestibulum in tincidunt non, fringilla nec mi. Nunc ipsum dui, ultricies quis molestie eu, convallis ac justo. Proin sit amet purus metus. Mauris ultrices ultricies suscipit. Morbi blandit magna nec tortor fringilla, vitae ultricies enim sollicitudin. Nullam tincidunt est eget cursus feugiat. Integer sem dolor, interdum ut maximus quis, ullamcorper eget lorem. Donec eu leo non lorem feugiat consequat. Etiam hendrerit metus ut venenatis rutrum. Duis bibendum at nunc eget sollicitudin. Proin varius odio nibh, non feugiat felis tincidunt non. Integer quis pellentesque leo. Sed eu vulputate massa. Sed tempus, lacus ut ullamcorper commodo, elit felis commodo neque, nec placerat turpis nulla a odio.
       </p>
+        </div>
+        <div class= 'd-none d-md-block col-md-6'>
+        <img src = "static/people.jpg" style = "height:320px;">
+      </div>
       <h2 class = "text-center mt-2 mb-4">Open Positions</h2>
-        <div>  
+      <div>  
         {%for job in jobs%}
           {%include 'jobitem.html'%}
         {% endfor %}
       </div>
       <div class = "text-center">
-      <button class = "btn btn-primary btn-lg">Contact Us</button>
-        <p class= "mt-4">Copyright 2023, Jean</p>
+      <a class = "btn btn-primary btn-lg" href = 'mailto:jeanhang.tjh@gmail.com?subject=Question%20About%20Job%20Openings&body=My%20name%3A%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20Question%3A%3Cyour%20question%20here(better%20not%20be%20smtg%20stupid)%3E'>
+        Contact Us
+      </a>
+        
       </div>
     </div>
+    {%include 'footer.html'%}
   </body>
 </html>
