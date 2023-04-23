@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jean's Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+      #banner{
+        height: 360px;
+        width:  100%;
+        object-fit:cover;
+      }
+    </style>
+  </head>
+    
+
+  
+  <body>
+    <div id="container">
+      <h1 class ='text-center mt-2 and mb-4'>{{company_name}} Careers</h1>
+
+    
+      <img class = 'img-fluid' id="banner" src="https://jean-careers-website-1.jhteee.repl.co/static/banner3.jpg" >
+
+
+    
+     <h2 class = "text-center mt-2 and mb-4">About Jean</h2>
+      <p class="lead">
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eget sollicitudin nunc, ut commodo enim. Cras vitae gravida eros. Sed pulvinar libero ut bibendum consectetur. Vivamus suscipit arcu eleifend vulputate commodo. Maecenas sed pretium augue. Quisque a facilisis eros, et fermentum sapien. Sed et libero sit amet elit tristique condimentum. Suspendisse ullamcorper auctor nulla.
+
+Duis sed consequat orci, sit amet tempor sem. Fusce enim arcu, semper nec elit a, scelerisque malesuada orci. Nulla mauris augue, vestibulum in tincidunt non, fringilla nec mi. Nunc ipsum dui, ultricies quis molestie eu, convallis ac justo. Proin sit amet purus metus. Mauris ultrices ultricies suscipit. Morbi blandit magna nec tortor fringilla, vitae ultricies enim sollicitudin. Nullam tincidunt est eget cursus feugiat. Integer sem dolor, interdum ut maximus quis, ullamcorper eget lorem. Donec eu leo non lorem feugiat consequat. Etiam hendrerit metus ut venenatis rutrum. Duis bibendum at nunc eget sollicitudin. Proin varius odio nibh, non feugiat felis tincidunt non. Integer quis pellentesque leo. Sed eu vulputate massa. Sed tempus, lacus ut ullamcorper commodo, elit felis commodo neque, nec placerat turpis nulla a odio.
+      </p>
+      <h2 class = "text-center mt-2 and mb-4">Open Positions</h2>
+        <div>  
+        {%for job in jobs%}
+          {%include 'jobitem.html'%}
+        {% endfor %}
+      </div>
+      <div class = "text-center">
+      <button class = "btn btn-primary btn-lg">Contact Us</button>
+        <p class= "mt-4">Copyright 2023, Jean</p>
+      </div>
+    </div>
+  </body>
+</html>
